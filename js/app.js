@@ -88,7 +88,17 @@ const getForecast = async function(){
 		    options: {
 		        scales: {
 		            y: {
-		                beginAtZero: false
+		                // beginAtZero: false
+		                title:{
+		                	display: true,
+		                	text: 'Celsius',
+		                }
+		            },
+		            x: {
+		            	title:{
+		            		display: true,
+		            		text: 'Date',
+		            	}
 		            }
 		        }
 		    }
