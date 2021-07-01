@@ -3,7 +3,7 @@ const userLocation = document.querySelector('#user-input');
 const divMeteo = document.querySelector('#meteo');
 
 // OpenWeather API: stock url addresses and api key
-const baseUrl = "http://api.openweathermap.org/data/2.5/";
+const baseUrl = "https://api.openweathermap.org/data/2.5/";
 const apiKey = "50aed4dd88f39aa5e55d04654d94a9ec";
 const iconURL = "https://openweathermap.org/img/wn/";
 
