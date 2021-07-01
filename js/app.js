@@ -26,7 +26,8 @@ const getLocationWeather = async function(){
 		// saves fetched data in json format
 		const data = await response.json();
 
-		// prepare html structure with the retrieved weather info
+		// prepare html structure with the retrieved weather info, as well as a country flag
+		// from a 2nd API www.countryflags.io
 		const conditions = `
 			<h3>Current conditions in ${data.name}
 				<img id="countryFlag" 
@@ -34,13 +35,9 @@ const getLocationWeather = async function(){
 			<img id='icon' src='${iconURL}${data.weather[0].icon}@2x.png'>
 			<p>${data.weather[0].description}</p>
 			<div><span>${Math.round(data.main.temp)}</span> ºC</div>
-			<button id="forecast">5-day Forecast</button>
 			`; 
 		// writes current conditions in html
 		divMeteo.innerHTML = conditions;
-
-		const btnForecast = document.querySelector('#forecast');
-		btnForecast.addEventListener('click',getForecast);
 
 		// clears previous chart in case there was already another one
 		if(forecastChart) forecastChart.destroy();
@@ -146,8 +143,9 @@ const getForecast = async function(){
 	}
 }
 
+// Listen to user input and calls functions on change
 userLocation.addEventListener('change',getLocationWeather);
-
+userLocation.addEventListener('change',getForecast);
 
 
 
