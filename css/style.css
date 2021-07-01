@@ -1,0 +1,29 @@
+body {
+	background: lightblue;
+	font-family: sans-serif;
+	text-align: center;
+	color: #555;
+}
+
+#user-input {
+	padding: 8px;
+}
+
+#countryFlag {
+	position: relative;
+	top: 9px;
+}
+
+#icon {
+	height: 110px;
+	margin: -30px;
+}
+
+div span {
+	font-size: 60px;
+}
+
+button#forecast {
+	padding: 6px;
+	margin-top: 10px;
+}
