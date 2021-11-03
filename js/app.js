@@ -31,7 +31,7 @@ const getLocationWeather = async function () {
     const conditions = `
 			<h3>Current conditions in ${data.name}
 				<img id="countryFlag" 
-				src="https://www.countryflags.io/${data.sys.country}/flat/32.png"></h3>
+				src="https://www.countryflagicons.com/FLAT/32/${data.sys.country}.png"></h3>
 			<img id='icon' src='${iconURL}${data.weather[0].icon}@2x.png'>
 			<p>${data.weather[0].description}</p>
 			<div><span>${Math.round(data.main.temp)}</span> ºC</div>
