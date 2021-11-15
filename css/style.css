@@ -1,7 +1,6 @@
 body {
   background: lightsteelblue;
   font-family: sans-serif;
-  /* text-align: center; */
   color: #555;
 }
 
@@ -40,9 +39,4 @@ body {
 
 div span {
   font-size: 60px;
-}
-
-button#forecast {
-  padding: 6px;
-  margin-top: 10px;
 }
