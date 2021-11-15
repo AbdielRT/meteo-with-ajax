@@ -27,7 +27,7 @@ const getLocationWeather = async function () {
     const data = await response.json();
 
     // prepare html structure with the retrieved weather info, as well as a country flag
-    // from a 2nd API www.countryflags.io
+    // from a 2nd API https://www.countryflagicons.com/
     const conditions = `
 			<h3>Current conditions in ${data.name}
 				<img id="countryFlag" 
