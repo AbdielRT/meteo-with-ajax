@@ -1,29 +1,43 @@
 body {
-	background: lightblue;
-	font-family: sans-serif;
-	text-align: center;
-	color: #555;
+  background: lightsteelblue;
+  font-family: sans-serif;
+  /* text-align: center; */
+  color: #555;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 #user-input {
-	padding: 8px;
+  padding: 8px;
 }
 
 #countryFlag {
-	position: relative;
-	top: 9px;
+  position: relative;
+  top: 9px;
 }
 
 #icon {
-	height: 110px;
-	margin: -30px;
+  height: 110px;
+  margin: -30px;
+}
+
+#forecastCanvas {
+  /* background: rgba(254, 254, 254, 0.6); */
+  max-width: 700px;
+  min-height: 400px;
+  margin: 20px;
+  align-self: center;
 }
 
 div span {
-	font-size: 60px;
+  font-size: 60px;
 }
 
 button#forecast {
-	padding: 6px;
-	margin-top: 10px;
+  padding: 6px;
+  margin-top: 10px;
 }

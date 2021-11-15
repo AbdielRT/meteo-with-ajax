@@ -59,7 +59,7 @@ const getForecast = async function () {
     if (!response.ok) throw new Error("Unable to retrieve data.");
 
     const forecastData = await response.json();
-    console.log(forecastData);
+    // console.log(forecastData);
 
     // prepares empty arrays for incoming data for 5-day forecast
     const temps = [];
@@ -79,7 +79,7 @@ const getForecast = async function () {
       }
     }
 
-    // ******* CHART for 5 day forecast **********
+    // ******* Chart.js for 5 day forecast **********
 
     // create context for canvas
     var ctx = document.querySelector("#forecastCanvas").getContext("2d");

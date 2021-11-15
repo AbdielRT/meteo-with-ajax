@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,19 +13,21 @@
     ></script>
   </head>
   <body>
-    <div>
-      <h1 class="titulo">Meteo</h1>
-      <input
-        id="user-input"
-        type="text"
-        name="user-input"
-        placeholder="Enter City"
-      />
-    </div>
-    <div id="meteo"></div>
+    <div class="container">
+      <div>
+        <h1 class="titulo">Meteo</h1>
+        <input
+          id="user-input"
+          type="text"
+          name="user-input"
+          placeholder="Enter City"
+        />
+      </div>
+      <div id="meteo"></div>
 
-    <div>
-      <canvas id="forecastCanvas" width="700" min-height="400"></canvas>
+      <div id="forecastContainer">
+        <canvas id="forecastCanvas"></canvas>
+      </div>
     </div>
   </body>
 </html>
