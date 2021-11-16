@@ -3,7 +3,7 @@ const divMeteo = document.querySelector("#meteo");
 
 // OpenWeather API: stock url addresses and api key
 const baseUrl = "https://api.openweathermap.org/data/2.5/";
-const apiKey = "50aed4dd88f39aa5e55d04654d94a9ec";
+const apiKey = process.env.API_KEY;
 const iconURL = "https://openweathermap.org/img/wn/";
 
 // global variable for Chart in order to clear the chart
