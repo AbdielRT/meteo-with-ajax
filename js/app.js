@@ -1,9 +1,11 @@
+import API_KEY from "./apikey.js";
+
 const userLocation = document.querySelector("#user-input");
 const divMeteo = document.querySelector("#meteo");
 
 // OpenWeather API: stock url addresses and api key
 const baseUrl = "https://api.openweathermap.org/data/2.5/";
-const apiKey = process.env.API_KEY;
+// const apiKey = process.env.API_KEY;
 const iconURL = "https://openweathermap.org/img/wn/";
 
 // global variable for Chart in order to clear the chart
@@ -14,7 +16,7 @@ const getLocationWeather = async function () {
   try {
     // retrieves input value from the user
     const city = this.value;
-    const fetchUrl = `${baseUrl}weather?q=${city}&appid=${apiKey}&units=metric`;
+    const fetchUrl = `${baseUrl}weather?q=${city}&appid=${API_KEY}&units=metric`;
 
     // fetches information from the API
     const response = await fetch(fetchUrl);
@@ -53,7 +55,7 @@ const getLocationWeather = async function () {
 const getForecast = async function () {
   try {
     const city = userLocation.value;
-    const fetchUrl = `${baseUrl}forecast?q=${city}&appid=${apiKey}&units=metric`;
+    const fetchUrl = `${baseUrl}forecast?q=${city}&appid=${API_KEY}&units=metric`;
 
     const response = await fetch(fetchUrl);
     if (!response.ok) throw new Error("Unable to retrieve data.");
@@ -67,7 +69,7 @@ const getForecast = async function () {
     const precips = [];
 
     // loop to stock 40 points data for the forecast
-    for (i = 0; i < forecastData.list.length; i++) {
+    for (let i = 0; i < forecastData.list.length; i++) {
       temps.push(Math.round(forecastData.list[i].main.temp));
       dates.push(forecastData.list[i].dt_txt.slice(0, -3));
 
