@@ -5,7 +5,6 @@ const divMeteo = document.querySelector("#meteo");
 
 // OpenWeather API: stock url addresses and api key
 const baseUrl = "https://api.openweathermap.org/data/2.5/";
-// const apiKey = process.env.API_KEY;
 const iconURL = "https://openweathermap.org/img/wn/";
 
 // global variable for Chart in order to clear the chart
@@ -61,7 +60,6 @@ const getForecast = async function () {
     if (!response.ok) throw new Error("Unable to retrieve data.");
 
     const forecastData = await response.json();
-    // console.log(forecastData);
 
     // prepares empty arrays for incoming data for 5-day forecast
     const temps = [];
